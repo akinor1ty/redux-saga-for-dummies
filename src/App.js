@@ -6,9 +6,10 @@ export default class App extends Component {
 
   render() {
     const { requestPosts } = this.props.actions;
+    const { prefs, cities } = this.props.app;
     return (
       <div className="App">
-        <Districts { ...this.props.app } requestPosts={ requestPosts } />
+        <Districts prefs={ prefs } cities={ cities } requestPosts={ requestPosts } />
       </div>
     );
   }
